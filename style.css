@@ -1,0 +1,515 @@
+body {
+    margin: 0;
+    font-family: Poppins;
+}
+.container {
+    width: 900px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+svg {
+    width: 30px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.icon-cart {
+    cursor: pointer;
+    position: relative;
+}
+.icon-cart span {
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: 50%;
+    right: -15px;
+}
+.title {
+    font-size: xx-large;
+}
+.listProduct .item img {
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.listProduct .item {
+    background-color: #EEEEE6;
+    padding: 20px;
+    border-radius: 20px;
+}
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+.listProduct .item .price {
+    letter-spacing: 7px;
+    font-size: small;
+}
+.listProduct .item button {
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* cart */
+.cartTab {
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 80px 1fr 70px;
+    transition: .5s;
+}
+body.showCart .cartTab {
+    right: 0;
+}
+body.showCart .container {
+    transform: translateX(-250px);
+}
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn {
+    padding-bottom: 20px;
+    padding: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button {
+    height: 50px;
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .close {
+    background-color: #eee;
+}
+.cart-summary {
+    padding: 15px;
+    text-align: center;
+    color: #eee;
+    border-top: 1px solid #555;
+}
+.cart-summary p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.listCart .item img {
+    width: 100%;
+}
+.listCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.listCart .quantity {
+    margin: 0%;
+    padding: 0%;
+    display: inline-flex;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCart .quantity span {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+.listCart {
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Remove button styling */
+.listCart .remove-item {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: rgb(243, 86, 86); 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+/* Adjust layout on tablet/phones */
+@media only screen and (max-width: 992px) {
+    .listProduct {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* General mobile adjustments */
+@media only screen and (max-width: 576px) {
+    /* Cart item image size */
+    .listCart .item img {
+        max-width: 60px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Align text and elements properly in cart item */
+    .listCart .item {
+        display: grid;
+        grid-template-columns: 60px 70px 40px 1fr;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+        font-size: 14px;
+    }
+    /* Make sure quantity controls are easy to click */
+    .listCart .quantity span {
+        font-size: 15px;
+        width: 20px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    /* Adjust the layout of the cart item remove button */
+    .listCart .remove-item {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 20px;
+        height: 20px;
+        font-size: 18px;
+    }
+
+    /* Adjust the cart tab layout */
+    .cartTab {
+        width: 100%;
+        right: -100%;
+    }
+    .cartTab .quantity {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+    }
+    body.showCart .cartTab {
+        right: 0;
+    }
+
+    /* Adjust cart summary layout */
+    .cart-summary {
+        font-size: 14px;
+    }
+
+    /* Cart summary: Total price text should be larger */
+    .cart-summary p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* Cart icon with number for mobile */
+    .icon-cart span {
+        top: -5px;
+        right: -10px;
+        font-size: 12px;
+    }
+
+    /* Product list on mobile */
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* Product item in the product list */
+    .listProduct .item {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .listProduct .item h2 {
+        font-size: 1rem;
+    }
+
+    .listProduct .item button {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    /* Modal product details */
+    .modal-left img {
+        padding-top: 100px;
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    /* Cart total summary section */
+    .cart-summary p {
+        font-size: 14px;
+    }
+
+    /* Modal dialog adjustments */
+    .modal-content {
+        flex-direction: column 1;
+        width: 100%;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-left {
+    text-align: center;
+}
+
+.modal-left img {
+    padding-top: 80px;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.modal-right {
+    padding-left: 20px;
+    width: 100%;
+}
+
+.modal-right input,
+.modal-right p {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#placeOrderButton,
+#closeModalButton {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#placeOrderButton {
+    background-color: #353432;
+    color: white;
+}
+
+#closeModalButton {
+    background-color: #353432;
+    color: white;
+}
+/* -------------------- */
+/* General modal styles */
+#checkoutModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0; /* Stay at the top */
+    left: 0; /* Stay at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
+    justify-content: center; /* Center the modal */
+    align-items: center; /* Center the modal vertically */
+}
+#checkoutModal .cart-summary  {
+    color: black;
+    position: relative;
+}
+
+/* Modal content styles */
+#checkoutModal .modal-content {
+    
+    display: flex; /* Flexbox for layout */
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 100%; /* Maximum width for larger screens */
+    width: 100%; /* Full width on smaller screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Modal columns */
+#checkoutModal .modal-columns {
+    display: flex; /* Flexbox for layout */
+    flex-direction: row; /* Horizontal layout by default */
+}
+
+/* Individual column styles */
+#checkoutModal .modal-column {
+    flex: 1; /* Each column takes equal space */
+    padding: 20px; /* Padding within columns */
+}
+
+#checkoutModal .modal-column::-webkit-scrollbar{
+    display: none;
+}
+
+/* Responsive adjustments for mobile view */
+@media only screen and (max-width: 768px) {
+    #checkoutModal .modal-columns {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+
+    #checkoutModal .modal-column {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    /* Input fields and buttons */
+    #checkoutModal input[type="text"],
+    #checkoutModal input[type="tel"],
+    #checkoutModal select,
+    #checkoutModal button {
+        width: 100%; /* Full width for inputs and buttons */
+        margin-bottom: 10px; /* Space between elements */
+    }
+}
+
+/* Input fields */
+#checkoutModal input[type="text"],
+#checkoutModal input[type="tel"],
+#checkoutModal select {
+    width: 100%; /* Full width */
+    padding: 8px; /* Padding inside inputs */
+    margin: 10px 0; /* Margin above and below */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+}
+
+/* Buttons */
+#checkoutModal button {
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: #353432; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Font size for buttons */
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Button hover effect */
+#checkoutModal button:hover {
+    background-color: #E8BC0E; /* Change background on hover */
+}
+
+/* Cart item styles */
+#checkoutModal .listCart {
+    margin-top: 20px; /* Space above cart items */
+}
+
+/* Individual cart item styles */
+#checkoutModal .listCart .item {
+    display: flex; /* Flexbox for item layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Space below each item */
+}
+
+/* Image in cart item */
+#checkoutModal .listCart .item .image {
+    margin-right: 10px; /* Space to the right of the image */
+}
+
+/* Image styles */
+#checkoutModal .listCart .item img {
+    width: 50px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Cart summary styles */
+#checkoutModal .cart-summary {
+    margin-top: 20px; /* Space above summary */
+    font-weight: bold; /* Bold text for summary */
+}
+
+/* Total price and total items text */
+#checkoutModal .cart-summary p {
+    margin: 5px 0; /* Margin above and below */
+}
+
+
