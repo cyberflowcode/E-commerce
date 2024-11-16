@@ -1,0 +1,124 @@
+[
+    {
+        "id": 1,
+        "name":" LD01 LOUNGE CHAIR",
+        "price": 2000,
+        "image": "image/1.png"
+        ,"shippingfee": 259
+        
+    }
+    ,
+    {
+        "id": 2,
+        "name":" LD02 LOUNGE CHAIR",
+        "price": 2250,
+        "image": "image/2.png"
+        ,"shippingfee": 170
+    },
+    {
+        "id": 3,
+        "name":" LD03 LOUNGE CHAIR",
+        "price": 3290,
+        "image": "image/3.png"
+        ,"shippingfee": 160
+    },
+    {
+        "id": 4,
+        "name":" LD04 LOUNGE CHAIR",
+        "price": 4200,
+        "image": "image/4.png"
+        ,"shippingfee": 130
+    },
+    {
+        "id": 5,
+        "name":" LD05 LOUNGE CHAIR",
+        "price": 2300,
+        "image": "image/5.png"
+        ,"shippingfee": 200
+    },
+    {
+        "id": 6,
+        "name":" LD06 LOUNGE CHAIR",
+        "price": 1200,
+        "image": "image/6.png"
+        ,"shippingfee": 230
+    },
+    {
+        "id": 7,
+        "name":" LD07 LOUNGE CHAIR",
+        "price": 2229,
+        "image": "image/7.png"
+        ,"shippingfee": 147
+    },
+    {
+        "id": 8,
+        "name":" LD08 LOUNGE CHAIR",
+        "price": 4200,
+        "image": "image/8.png",
+        "shippingfee": 232
+    },
+    {
+        "id": 9,
+        "name":" GeekVape Version 2 Latest",
+        "price": 2599,
+        "image": "image/9.png"
+        ,"shippingfee": 257
+    },
+    {
+        "id": 10,
+        "name":" Vgod Moc Version 3 Latest",
+        "price": 1499,
+        "image": "image/10.png"
+        ,"shippingfee": 278
+    },
+    {
+        "id": 11,
+        "name":" Mansanas 8 512gb Brand New",
+        "price": 18200,
+        "image": "image/image-692x692.jpg"
+        ,"shippingfee": 298
+    },
+    {
+        "id": 12,
+        "name":" LD02 LOUNGE CHAIR",
+        "price": 5250,
+        "image": "image/2.png"
+        ,"shippingfee": 170
+    },
+    {
+        "id": 13,
+        "name":" LD03 LOUNGE CHAIR",
+        "price": 4290,
+        "image": "image/3.png"
+        ,"shippingfee": 160
+    },
+    {
+        "id": 14,
+        "name":" LD04 LOUNGE CHAIR",
+        "price": 3229,
+        "image": "image/4.png"
+        ,"shippingfee": 130
+    },
+    {
+        "id": 15,
+        "name":" LD02 LOUNGE CHAIR",
+        "price": 1250,
+        "image": "image/2.png"
+        ,"shippingfee": 170
+    },
+    {
+        "id": 16,
+        "name":" LD03 LOUNGE CHAIR",
+        "price": 1170,
+        "image": "image/3.png"
+        ,"shippingfee": 160
+    },
+    {
+        "id": 17,
+        "name":" LD04 LOUNGE CHAIR",
+        "price": 2012,
+        "image": "image/4.png"
+        ,"shippingfee": 131
+    }
+
+]
